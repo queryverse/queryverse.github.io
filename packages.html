@@ -1,4 +1,166 @@
 ---
 title: Packages
-description: A list of packages
+description: The packages that make up the Queryverse
 ---
+
+<div class="content">
+
+        <section>
+                <div class="container flex">
+                    <div class="text editable">
+                        <p><a href="https://github.com/queryverse/Queryverse.jl">Queryverse.jl</a> is the meta-package for the Queryverse. It installs and makes usable most of the other packages that are described below. The main purpose of this package is to make it easier to install all of the Queryverse in one go.</p>
+                    </div>
+                </div>
+            </section>
+        
+
+	<section>
+		<div class="container flex">
+			<div class="text editable">
+                <h2>Data Manipulation</h2>
+				<p><a href="https://github.com/queryverse/Query.jl">Query.jl</a> provides commands to query and manipulate any data source. It provides tools to filter, sort, group, join and do many other operations on datasets. It works equally well with tabular and non-tabular data sources.</p>
+			</div>
+		</div>
+	</section>
+
+    <section>
+		<div class="container flex">
+			<div class="text editable">
+                <h2>Data Visualization</h2>
+                <p><a href="https://github.com/fredo-dedup/VegaLite.jl">VegaLite.jl</a>
+                    provides an intuitive and easy to use Julia API for
+                    the grammar of interactive graphics
+                    <a href="https://vega.github.io/vega-lite/">Vega-Lite</a>
+                    platform. It is the main plotting package for Queryverse.
+                </p>
+                <p><a href="https://github.com/queryverse/DataVoyager.jl">DataVoyager.jl</a>
+                    is a Julia package that provides an interactive data
+                    exploration tools. It is based on the <a href="https://github.com/vega/voyager">Voyager</a>
+                    project and it tightly integrated with <a href="https://github.com/fredo-dedup/VegaLite.jl">VegaLite.jl</a>.
+                </p>
+                <p><a href="https://github.com/queryverse/ElectronDisplay.jl">ElectronDisplay.jl</a>
+                    is an alternative figure display for Julia. When the package
+                    is loaded, figures from various plotting packages open
+                    up in a custom Electron window. The package natively
+                    supports interactive figures from <a href="https://github.com/fredo-dedup/VegaLite.jl">VegaLite.jl</a>
+                    and <a href="https://github.com/sglyon/PlotlyJS.jl">PlotlyJS.jl</a>.
+                </p>
+    
+            </div>
+		</div>
+	</section>
+
+    <section>
+		<div class="container flex">
+			<div class="text editable">
+                <h2>File IO</h2>
+                <p><a href="https://github.com/queryverse/CSVFiles.jl">CSVFiles.jl</a>
+                    can read and write CSV files. Under the hood it uses
+                    the extremly fast <a href="https://github.com/JuliaComputing/TextParse.jl">TextParse.jl</a>
+                    package.
+                </p>
+                <p><a href="https://github.com/queryverse/FeatherFiles.jl">FeatherFiles.jl</a>
+                    can read and write Feather files.
+                </p>
+                <p><a href="https://github.com/queryverse/ExcelFiles.jl">ExcelFiles.jl</a>
+                    can read and write Excel Files.
+                </p>
+                <p><a href="https://github.com/queryverse/StatFiles.jl">StatFiles.jl</a>
+                    can read SPSS, STATA and SAS files.
+                </p>
+                <p><a href="https://github.com/queryverse/ParquetFiles.jl">ParquetFiles.jl</a>
+                    can read Parquet files.
+                </p>
+                <p><a href="https://github.com/queryverse/VegaDatasets.jl">VegaDatasets.jl</a>
+                    provides some example datasets from the <a href="https://github.com/vega/vega-datasets">
+                    Vega Datasets</a> project.
+                </p>
+
+            </div>
+		</div>
+	</section>
+
+    <section>
+		<div class="container flex">
+			<div class="text editable">
+                <h2>Low level infrastructure</h2>
+                <p><a href="https://github.com/queryverse/TableTraits.jl">TableTraits.jl</a>
+                    contains the core table interface that powers all of
+                    Queryverse and enables seemless interopability between
+                    lots of different packages that work with tabular data.
+                </p>
+                <p><a href="https://github.com/queryverse/DataValues.jl">DataValues.jl</a>
+                    contains the core types that the Queryverse uses to handle
+                    missing (also known as NA or NULL) data.
+                </p>
+                <p><a href="https://github.com/queryverse/IteratorInterfaceExtensions.jl">IteratorInterfaceExtensions.jl</a>
+                    has a few extensions to the standard Julia iterator interface
+                    that are used throughout the Queryverse.
+                </p>
+                <p><a href="https://github.com/queryverse/TableTraitsUtils.jl">TableTraitsUtils.jl</a>
+                    provides helper functions and types that make it easier
+                    to implement the <a href="https://github.com/queryverse/TableTraits.jl">TableTraits.jl</a>
+                    interface.
+                </p>
+                <p><a href="https://github.com/queryverse/TableShowUtils.jl">TableShowUtils.jl</a>
+                    provides various functions that are used throughout
+                    the Queryverse to show tabular data in the REPL and
+                    in some other MIME formats.
+                </p>
+                <p><a href="https://github.com/queryverse/IterableTables.jl">IterableTables.jl</a>
+                    contains implementations of the <a href="https://github.com/queryverse/TableTraits.jl">TableTraits.jl</a>
+                    interface for packages that don't support this interface
+                    natively. As more packages support <a href="https://github.com/queryverse/TableTraits.jl">TableTraits.jl</a>
+                    out of the box, the role of this package becomes less
+                    and less important.
+                </p>
+
+            </div>
+		</div>
+    </section>
+    
+    <section>
+		<div class="container flex">
+			<div class="text editable">
+                <h2>Internal packages</h2>
+                <p><a href="https://github.com/queryverse/FeatherLib.jl">FeatherLib.jl</a>
+                    provides low level functions to read Feather Files. The
+                    <a href="https://github.com/queryverse/FeatherFiles.jl">FeatherFiles.jl</a>
+                    packages uses it to provide a user friendly API for
+                    Feather files.
+                </p>
+                <p><a href="https://github.com/queryverse/ExcelReaders.jl">ExcelReaders.jl</a>
+                    provides a low level interface to read Excel files. The
+                    <a href="https://github.com/queryverse/ExcelFiles.jl">ExcelFiles.jl</a>
+                    packages uses it to provide a user friendly API for
+                    Excel files.
+                </p>
+                <p><a href="https://github.com/queryverse/QueryOperators.jl">QueryOperators.jl</a>
+                    contains the low level query operator function definitions
+                    and the default implementation of the query operators
+                    for iterable sources. The <a href="https://github.com/queryverse/Query.jl">Query.jl</a>
+                    package provides a user friednly API for this functionality.
+                </p>
+            </div>
+		</div>
+	</section>
+
+<!--
+	<section class="testimonial">
+		<div class="container flex">
+			<div class="testimonial-block">
+				<div class="square-image"><img src="https://source.unsplash.com/6anudmpILw4/600x400" alt="Jim James" class="editable"></div>
+				<blockquote>
+					<p class="editable">Hydra has shaped the business we have today. We have a repeatable sales process and a strategy to scale our team. I recommend Hydra to any business looking to improve their sales.</p>
+					<p class="editable author">Jim James - CEO of Global Corp.</p>
+				</blockquote>
+			</div>
+		</div>
+	</section>
+
+	<section class="bottom-cta">
+		<h2 class="editable"><strong>Improve</strong> your sales process today</h2>
+		<div class="button alt"><a href="#">Get Started Free</a></div>
+	</section>
+	-->
+</div>
