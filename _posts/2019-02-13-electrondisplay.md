@@ -24,7 +24,7 @@ julia> dataset("cars") |> @vlplot(:point, x=:Acceleration, y=:Miles_per_Gallon, 
 
 will open a window that displays this plot:
 
-![VegaLite.jl screenshot](assets/blog/images/electrondisplay-screenshot-vegalite.png)
+![VegaLite.jl screenshot](/assets/blog/images/electrondisplay-screenshot-vegalite.png)
 
 ## Table display
 
@@ -53,7 +53,7 @@ julia> dataset("cars") |>
 
 And the results are shown in a window like this:
 
-![Grid screenshot](assets/blog/images/electrondisplay-screenshot-grid.png)
+![Grid screenshot](/assets/blog/images/electrondisplay-screenshot-grid.png)
 
 The table display in [ElectronDisplay.jl](https://github.com/queryverse/ElectronDisplay.jl) works for any source that either supports a `show` method for the `application/vnd.dataresource+json` MIME type, or implements the [TableTraits.jl](https://github.com/queryverse/TableTraits.jl) interface. Anything that iterates named tuples automatically is a [TableTraits.jl](https://github.com/queryverse/TableTraits.jl) source, so even packages that have never heard of either option might well work with [ElectronDisplay.jl](https://github.com/queryverse/ElectronDisplay.jl).
 
