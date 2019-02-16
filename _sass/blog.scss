@@ -123,3 +123,14 @@
 		right: -3px;
 	}
 }
+
+pre {
+	border: 1px solid #ddd;
+	background: rgb(250, 250, 250);
+	margin: 1em -1.5em;
+	padding: 1em 1.5em;
+	overflow: auto;
+	direction: ltr;
+	border-radius: 5px;
+  }
+  
