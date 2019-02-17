@@ -22,6 +22,9 @@ comments: true
 			{% endif %}
 		</div>
 
+		<p>{{ site.disqus_shortname }}</p>
+		<p>{{ page.comments }}</p>
+
 		{% if site.disqus_shortname and page.comments %}
 			<div id="disqus_thread"></div>
 			<script>
