@@ -8,6 +8,8 @@
   - name: Contribute
     link: /contribute/
 - links:
+  - name: Status
+    link: /status/
   - name: Github
     link: https://github.com/queryverse
     new_window: true

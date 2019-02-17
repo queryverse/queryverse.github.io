@@ -1,0 +1,56 @@
+---
+title: Status
+description: Status of various Queryverse packages
+---
+
+<h2>Nightly builds</h2>
+
+<table>
+    <thead>
+        <tr class="header">
+            <th>Package</th>
+            <th>Travis</th>
+            <th>AppVeyor</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><a href="https://github.com/queryverse/QueryverseTests">QueryverseTests</a></td>
+            <td><a href="https://travis-ci.org/queryverse/QueryverseTests"><img
+                        src="https://travis-ci.org/queryverse/QueryverseTests.svg?branch=master"
+                        alt="Build Status" /></a></td>
+            <td><a href="https://ci.appveyor.com/project/queryverse/queryversetests/branch/master"><img
+                        src="https://ci.appveyor.com/api/projects/status/lgng9k2symono5gb/branch/master?svg=true"
+                        alt="Build status" /></a></td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Regular package builds</h2>
+
+<table>
+    <thead>
+        <tr class="header">
+            <th>Package</th>
+            <th>Travis</th>
+            <th>AppVeyor</th>
+            <th>Codecov</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for package in site.data.packages %}
+        <tr>
+            <td><a href="https://github.com/queryverse/{{ package.name }}.jl/">{{ package.name }}.jl</a></td>
+            <td><a href="https://travis-ci.org/queryverse/{{ package.name }}.jl"><img
+                        src="https://travis-ci.org/queryverse/{{ package.name }}.jl.svg?branch=master"
+                        alt="Build Status" /></a></td>
+            <td><a href="https://ci.appveyor.com/project/queryverse/{{ package.appveyorname }}/branch/master"><img
+                        src="https://ci.appveyor.com/api/projects/status/{{ package.appveyorid }}/branch/master?svg=true"
+                        alt="Build status" /></a></td>
+            <td><a href="https://codecov.io/gh/queryverse/{{ package.name }}.jl"><img
+                        src="https://codecov.io/gh/queryverse/{{ package.name }}.jl/branch/master/graph/badge.svg"
+                        alt="codecov" /></a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
