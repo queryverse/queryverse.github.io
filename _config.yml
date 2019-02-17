@@ -44,6 +44,12 @@ defaults:
       path: "index.html"
     values:
       layout: "default"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      comments: true
 
 jekyll-archives:
   enabled:
