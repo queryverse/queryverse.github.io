@@ -2,15 +2,21 @@
     "data": {
         "url": "/benchmarkresults/csvreader.csv"
     },
+    "transform": [
+        {
+            "filter": "datum.attempt == 'first' && !datum.withna"
+        }
+    ],
     "mark": "bar",
     "encoding": {
         "x": {
-            "field": "a",
-            "type": "ordinal"
+            "field": "timing",
+            "aggregation": "min",
+            "type": "quantitative"
         },
         "y": {
-            "field": "b",
-            "type": "quantitative"
+            "field": "package",
+            "type": "nominal"
         }
     }
 }
