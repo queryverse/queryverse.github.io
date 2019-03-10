@@ -5,6 +5,10 @@
     "transform": [
         {
             "filter": "datum.attempt == 'first' && datum.cols==20"
+        },
+        {
+            "calculate": "datum.withna=='true' ? 'With NA values' : 'Without NA values'",
+            "as": "withna_verbal"
         }
     ],
     "facet": {
@@ -13,8 +17,9 @@
             "type": "ordinal"
         },
         "row": {
-            "field": "withna",
-            "type": "nominal"
+            "field": "withna_verbal",
+            "type": "nominal",
+            "title": ""
         }
     },
     "title": "Results for 20 columns",
