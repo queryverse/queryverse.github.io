@@ -1,8 +1,10 @@
 package,version
 "CSV.jl","v0.4.3 (with Parsers.jl#master)"
+"CSV.jl; 0.6", "v0.2.5"
 "CSVFiles.jl","v0.14.0"
 "DataFrames.jl","v0.17.1"
 "Pandas.jl","v1.1.1"
 "TextParse.jl","v0.7.5"
+"TextParse.jl; 0.6", "v0.5.0"
 "R fread","v1.11.8"
 "R readr", "v1.3.1"

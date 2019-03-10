@@ -123,7 +123,8 @@
                 },
                 "text": {
                     "field": "version",
-                    "align": "right"
+                    "align": "right",
+                    "baseline": "middle"
                 }
             }
         }
