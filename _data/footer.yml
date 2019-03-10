@@ -10,6 +10,8 @@
 - links:
   - name: Status
     link: /status/
+  - name: Benchmarks
+    link: /benchmarks/
   - name: Github
     link: https://github.com/queryverse
     new_window: true
