@@ -4,7 +4,7 @@
     },
     "transform": [
         {
-            "filter": "datum.attempt == 'first' && datum.cols==20"
+            "filter": "datum.attempt == 'first'"
         },
         {
             "calculate": "datum.withna=='true' ? 'With NA values' : 'Without NA values'",
@@ -12,83 +12,97 @@
         }
     ],
     "facet": {
-        "column": {
-            "field": "rows",
-            "type": "ordinal"
-        },
         "row": {
             "field": "withna_verbal",
             "type": "nominal",
-            "title": ""
+            "header": {
+                "title": "With NA values"
+            }
         }
     },
-    "title": "Results for 20 columns",
-    "resolve": {
-        "scale": {
-            "x": "independent"
-        }
-    },
-    "background": "white",
     "spec": {
         "facet": {
             "row": {
-                "field": "file",
-                "type": "nominal"
-            }
-        },
-        "resolve": {
-            "scale": {
-                "x": "independent"
+                "field": "cols",
+                "type": "ordinal",
+                "header": {
+                    "title": "# of columns"
+                }
             }
         },
         "spec": {
-            "layer": [
-                {
-                    "encoding": {
-                        "x": {
-                            "field": "timing",
-                            "title": "seconds",
-                            "aggregate": "min",
-                            "type": "quantitative"
-                        },
-                        "color": {
-                            "field": "package"
-                        }
-                    },
-                    "mark": "bar"
-                },
-                {
-                    "encoding": {
-                        "x2": {
-                            "field": "timing",
-                            "aggregate": "max",
-                            "type": "quantitative"
-                        },
-                        "x": {
-                            "field": "timing",
-                            "aggregate": "min",
-                            "type": "quantitative"
-                        }
-                    },
-                    "mark": "rule"
-                },
-                {
-                    "encoding": {
-                        "x": {
-                            "field": "timing"
-                        }
-                    },
-                    "mark": "tick"
+            "facet": {
+                "row": {
+                    "field": "file",
+                    "type": "nominal",
+                    "header": {
+                        "title": "Input filename"
+                    }
                 }
-            ],
-            "encoding": {
-                "y": {
-                    "field": "package",
-                    "title": "",
-                    "type": "nominal"
+            },
+            "spec": {
+                "facet": {
+                    "column": {
+                        "field": "rows",
+                        "type": "ordinal"
+                    }
+                },
+                "resolve": {
+                    "scale": {
+                        "x": "independent"
+                    }
+                },
+                "spec": {
+                    "layer": [
+                        {
+                            "encoding": {
+                                "x": {
+                                    "field": "timing",
+                                    "title": "seconds",
+                                    "aggregate": "min",
+                                    "type": "quantitative"
+                                },
+                                "color": {
+                                    "field": "package"
+                                }
+                            },
+                            "mark": "bar"
+                        },
+                        {
+                            "encoding": {
+                                "x2": {
+                                    "field": "timing",
+                                    "aggregate": "max",
+                                    "type": "quantitative"
+                                },
+                                "x": {
+                                    "field": "timing",
+                                    "aggregate": "min",
+                                    "type": "quantitative"
+                                }
+                            },
+                            "mark": "rule"
+                        },
+                        {
+                            "encoding": {
+                                "x": {
+                                    "field": "timing"
+                                }
+                            },
+                            "mark": "tick"
+                        }
+                    ],
+                    "encoding": {
+                        "y": {
+                            "field": "package",
+                            "title": "",
+                            "type": "nominal"
+                        }
+                    }
                 }
             }
         }
     },
+    "background": "white",
     "config": {}
 }
