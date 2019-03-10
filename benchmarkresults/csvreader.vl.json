@@ -4,19 +4,85 @@
     },
     "transform": [
         {
-            "filter": "datum.attempt == 'first' && !datum.withna"
+            "filter": "datum.attempt == 'first' && datum.cols==20"
         }
     ],
-    "mark": "bar",
-    "encoding": {
-        "x": {
-            "field": "timing",
-            "aggregation": "min",
-            "type": "quantitative"
+    "facet": {
+        "column": {
+            "field": "rows",
+            "type": "ordinal"
         },
-        "y": {
-            "field": "package",
+        "row": {
+            "field": "withna",
             "type": "nominal"
+        }
+    },
+    "title": "Results for 20 columns",
+    "resolve": {
+        "scale": {
+            "x": "independent"
+        }
+    },
+    "background": "white",
+    "spec": {
+        "facet": {
+            "row": {
+                "field": "file",
+                "type": "nominal"
+            }
+        },
+        "spec": {
+            "layer": [
+                {
+                    "encoding": {
+                        "x": {
+                            "field": "timing",
+                            "title": "seconds",
+                            "aggregate": "min",
+                            "type": "quantitative"
+                        },
+                        "color": {
+                            "field": "package"
+                        }
+                    },
+                    "mark": "bar"
+                },
+                {
+                    "encoding": {
+                        "x2": {
+                            "field": "timing",
+                            "aggregate": "max",
+                            "type": "quantitative"
+                        },
+                        "x": {
+                            "field": "timing",
+                            "aggregate": "min",
+                            "type": "quantitative"
+                        }
+                    },
+                    "mark": "rule"
+                },
+                {
+                    "encoding": {
+                        "x": {
+                            "field": "timing"
+                        }
+                    },
+                    "mark": "tick"
+                }
+            ],
+            "encoding": {
+                "y": {
+                    "field": "package",
+                    "title": "",
+                    "type": "nominal"
+                }
+            }
+        },
+        "resolve": {
+            "scale": {
+                "x": "shared"
+            }
         }
     }
 }
