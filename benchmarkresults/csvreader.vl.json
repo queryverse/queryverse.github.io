@@ -36,6 +36,11 @@
                 "type": "nominal"
             }
         },
+        "resolve": {
+            "scale": {
+                "x": "independent"
+            }
+        },
         "spec": {
             "layer": [
                 {
@@ -83,11 +88,7 @@
                     "type": "nominal"
                 }
             }
-        },
-        "resolve": {
-            "scale": {
-                "x": "shared"
-            }
         }
-    }
+    },
+    "config": {}
 }
