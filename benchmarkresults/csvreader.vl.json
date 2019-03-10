@@ -1,108 +1,133 @@
 {
-    "data": {
-        "url": "/benchmarkresults/csvreader.csv"
-    },
-    "transform": [
+    "vconcat": [
         {
-            "filter": "datum.attempt == 'first'"
-        },
-        {
-            "calculate": "datum.withna=='true' ? 'With NA values' : 'Without NA values'",
-            "as": "withna_verbal"
-        }
-    ],
-    "facet": {
-        "row": {
-            "field": "withna_verbal",
-            "type": "nominal",
-            "header": {
-                "title": "With NA values"
-            }
-        }
-    },
-    "spec": {
-        "facet": {
-            "row": {
-                "field": "cols",
-                "type": "ordinal",
-                "header": {
-                    "title": "# of columns"
+            "data": {
+                "url": "/benchmarkresults/csvreader.csv"
+            },
+            "transform": [
+                {
+                    "filter": "datum.attempt == 'first'"
+                },
+                {
+                    "calculate": "datum.withna=='true' ? 'With NA values' : 'Without NA values'",
+                    "as": "withna_verbal"
                 }
-            }
-        },
-        "spec": {
+            ],
             "facet": {
                 "row": {
-                    "field": "file",
+                    "field": "withna_verbal",
                     "type": "nominal",
                     "header": {
-                        "title": "Input filename"
+                        "title": "With NA values"
                     }
                 }
             },
             "spec": {
                 "facet": {
-                    "column": {
-                        "field": "rows",
-                        "type": "ordinal"
-                    }
-                },
-                "resolve": {
-                    "scale": {
-                        "x": "independent"
+                    "row": {
+                        "field": "cols",
+                        "type": "ordinal",
+                        "header": {
+                            "title": "# of columns"
+                        }
                     }
                 },
                 "spec": {
-                    "layer": [
-                        {
-                            "encoding": {
-                                "x": {
-                                    "field": "timing",
-                                    "title": "seconds",
-                                    "aggregate": "min",
-                                    "type": "quantitative"
-                                },
-                                "color": {
-                                    "field": "package"
-                                }
-                            },
-                            "mark": "bar"
-                        },
-                        {
-                            "encoding": {
-                                "x2": {
-                                    "field": "timing",
-                                    "aggregate": "max",
-                                    "type": "quantitative"
-                                },
-                                "x": {
-                                    "field": "timing",
-                                    "aggregate": "min",
-                                    "type": "quantitative"
-                                }
-                            },
-                            "mark": "rule"
-                        },
-                        {
-                            "encoding": {
-                                "x": {
-                                    "field": "timing"
-                                }
-                            },
-                            "mark": "tick"
+                    "facet": {
+                        "row": {
+                            "field": "file",
+                            "type": "nominal",
+                            "header": {
+                                "title": "Input filename"
+                            }
                         }
-                    ],
-                    "encoding": {
-                        "y": {
-                            "field": "package",
-                            "title": "",
-                            "type": "nominal"
+                    },
+                    "spec": {
+                        "facet": {
+                            "column": {
+                                "field": "rows",
+                                "type": "ordinal"
+                            }
+                        },
+                        "resolve": {
+                            "scale": {
+                                "x": "independent"
+                            }
+                        },
+                        "spec": {
+                            "layer": [
+                                {
+                                    "encoding": {
+                                        "x": {
+                                            "field": "timing",
+                                            "title": "seconds",
+                                            "aggregate": "min",
+                                            "type": "quantitative"
+                                        },
+                                        "color": {
+                                            "field": "package"
+                                        }
+                                    },
+                                    "mark": "bar"
+                                },
+                                {
+                                    "encoding": {
+                                        "x2": {
+                                            "field": "timing",
+                                            "aggregate": "max",
+                                            "type": "quantitative"
+                                        },
+                                        "x": {
+                                            "field": "timing",
+                                            "aggregate": "min",
+                                            "type": "quantitative"
+                                        }
+                                    },
+                                    "mark": "rule"
+                                },
+                                {
+                                    "encoding": {
+                                        "x": {
+                                            "field": "timing"
+                                        }
+                                    },
+                                    "mark": "tick"
+                                }
+                            ],
+                            "encoding": {
+                                "y": {
+                                    "field": "package",
+                                    "title": "",
+                                    "type": "nominal"
+                                }
+                            }
                         }
                     }
                 }
             }
+        },
+        {
+            "data": {
+                "url": "/benchmarkresults/csvreaderpackageversions.csv"
+            },
+            "title": "Package versions",
+            "mark": "text",
+            "encoding": {
+                "x": {
+                    "value": 50
+                },
+                "y": {
+                    "field": "package",
+                    "type": "nominal",
+                    "title": null
+                },
+                "text": {
+                    "field": "version",
+                    "align": "right"
+                }
+            }
         }
-    },
+    ],
     "background": "white",
     "config": {}
 }
