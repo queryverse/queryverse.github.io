@@ -1,0 +1,16 @@
+{
+    "data": {
+        "url": "csvreader.csv"
+    },
+    "mark": "bar",
+    "encoding": {
+        "x": {
+            "field": "a",
+            "type": "ordinal"
+        },
+        "y": {
+            "field": "b",
+            "type": "quantitative"
+        }
+    }
+}
