@@ -111,10 +111,11 @@
                 "url": "/benchmarkresults/csvreaderpackageversions.csv"
             },
             "title": "Package versions",
+            "width": 200,
             "mark": "text",
             "encoding": {
                 "x": {
-                    "value": 50
+                    "value": 10
                 },
                 "y": {
                     "field": "package",
@@ -122,13 +123,16 @@
                     "title": null
                 },
                 "text": {
-                    "field": "version",
-                    "align": "right",
-                    "baseline": "middle"
+                    "field": "version"
                 }
             }
         }
     ],
     "background": "white",
-    "config": {}
+    "config": {
+        "text": {
+            "baseline": "middle",
+            "align": "left"
+        }
+    }
 }
