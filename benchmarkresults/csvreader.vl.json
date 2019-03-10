@@ -1,6 +1,6 @@
 {
     "data": {
-        "url": "csvreader.csv"
+        "url": "/benchmarkresults/csvreader.csv"
     },
     "mark": "bar",
     "encoding": {
