@@ -1,5 +1,5 @@
 package,version
-"CSV.jl","v0.4.3 (with Parsers.jl#master)"
+"CSV.jl","v0.4.3"
 "CSV.jl; 0.6","v0.2.5"
 "CSVFiles.jl","v0.14.0"
 "DataFrames.jl","v0.17.1"
