@@ -6,7 +6,7 @@
             },
             "transform": [
                 {
-                    "filter": "datum.attempt == 'first' && indexof(['CSV.jl','CSVFiles.jl', 'Pandas.jl', 'Python Arrow', 'Python Arrow parallel', 'Python Pandas', 'R fread', 'R fread parallel', 'R readr', 'TextParse.jl'],datum.package)>=0"
+                    "filter": "datum.attempt == 'first' && indexof(['Julia CSV.jl', 'Julia CSVFiles.jl', 'Julia CSVReader.jl', 'Julia TableReader.jl', 'Julia Pandas.jl', 'Julia TextParse.jl', 'Python Arrow', 'Python Arrow parallel', 'Python Pandas', 'R fread', 'R fread parallel', 'R readr'],datum.package)>=0"
                 },
                 {
                     "calculate": "datum.withna=='true' ? 'With NA values' : 'Without NA values'",
