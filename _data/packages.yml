@@ -61,3 +61,6 @@
 - name: VegaDatasets
   appveyorname: vegadatasets-jl
   appveyorid: ad1mcex5tjbe160r
+- name: VegaLite
+  appveyorname: vegalite-jl
+  appveyorid: gvjbhleuxdergkhw

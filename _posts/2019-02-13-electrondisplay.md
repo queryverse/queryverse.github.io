@@ -12,7 +12,7 @@ author: David Anthoff
 
 Anytime you load [ElectronDisplay.jl](https://github.com/queryverse/ElectronDisplay.jl) via `using ElectonDisplay`, it automatically becomes the default display for you current Julia session. From that moment on, whenever you display a figure from any of the supported plotting packages, it will show up in a window that is managed by [ElectronDisplay.jl](https://github.com/queryverse/ElectronDisplay.jl). Any plotting package that hooks into the standard Julia [multimedia I/O](https://docs.julialang.org/en/v1.1/base/io-network/#Multimedia-I/O-1) API will work with this setup, as long as it supports either the PNG or SVG format with its `show` method.
 
-[ElectronDisplay.jl](https://github.com/queryverse/ElectronDisplay.jl) provides more tightly integrated support for [PlotlyJS.jl](https://github.com/sglyon/PlotlyJS.jl) and [VegaLite.jl](https://github.com/fredo-dedup/VegaLite.jl): plots from both packages support a full range of interactive features inside the window that [ElectronDisplay.jl](https://github.com/queryverse/ElectronDisplay.jl) opens for them.
+[ElectronDisplay.jl](https://github.com/queryverse/ElectronDisplay.jl) provides more tightly integrated support for [PlotlyJS.jl](https://github.com/sglyon/PlotlyJS.jl) and [VegaLite.jl](https://github.com/queryverse/VegaLite.jl): plots from both packages support a full range of interactive features inside the window that [ElectronDisplay.jl](https://github.com/queryverse/ElectronDisplay.jl) opens for them.
 
 Here is a simple example of how this works. Executing the following example code
 
