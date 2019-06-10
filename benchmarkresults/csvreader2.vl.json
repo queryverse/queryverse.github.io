@@ -119,6 +119,9 @@
         "text": {
             "baseline": "middle",
             "align": "left"
+        },
+        "axis": {
+            "labelFontSize": 18
         }
     }
 }
