@@ -1,0 +1,34 @@
+---
+title: CSV Reader Benchmarks
+description: Queryverse benchmarks for CSV Readers
+---
+
+<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@3"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@3"></script>
+
+<div class="content">
+  <section>
+    <div class="container flex">
+      <div class="text editable">
+        <h2>CSV readers</h2>
+        <p>
+          The setup for these runs is still a work in progress and there
+          are a number of caveats that apply to the current set of results.
+          Please don't yet cite them or take them too serious until we
+          have sorted out all remaining benchmarking issues. The
+          replication code for these results can be found at
+          <a href="https://github.com/davidanthoff/csv-comparison">https://github.com/davidanthoff/csv-comparison</a>.
+          The raw timing data can be downloaded from <a href="/benchmarkresults/csvreader.csv">here</a>.
+        </p>
+        <div id="vlvis"></div>
+
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+  const spec = "/benchmarkresults/csvreader.vl.json"
+  vegaEmbed('#vlvis', spec)
+</script>
