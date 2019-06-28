@@ -64,3 +64,6 @@
 - name: VegaLite
   appveyorname: vegalite-jl
   appveyorid: gvjbhleuxdergkhw
+- name: DataValueInterfaces
+  appveyorname: datavalueinterfaces-jl
+  appveyorid: 96kswxnr75u4ob2m
