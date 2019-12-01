@@ -32,8 +32,7 @@ description: Status of various Queryverse packages
     <thead>
         <tr class="header">
             <th>Package</th>
-            <th>Travis</th>
-            <th>AppVeyor</th>
+            <th>GitHub Actions</th>
             <th>Codecov</th>
         </tr>
     </thead>
@@ -42,11 +41,8 @@ description: Status of various Queryverse packages
         <tr>
             <td><a href="https://github.com/queryverse/{{ package.name }}.jl/">{{ package.name }}.jl</a></td>
             <td><a href="https://travis-ci.org/queryverse/{{ package.name }}.jl"><img
-                        src="https://travis-ci.org/queryverse/{{ package.name }}.jl.svg?branch=master"
+                        src="https://github.com/queryverse/{{ package.name }}.jl/workflows/.github/workflows/jlpkgbutler-ci-master-workflow.yml/badge.svg"
                         alt="Build Status" /></a></td>
-            <td><a href="https://ci.appveyor.com/project/queryverse/{{ package.appveyorname }}/branch/master"><img
-                        src="https://ci.appveyor.com/api/projects/status/{{ package.appveyorid }}/branch/master?svg=true"
-                        alt="Build status" /></a></td>
             <td><a href="https://codecov.io/gh/queryverse/{{ package.name }}.jl"><img
                         src="https://codecov.io/gh/queryverse/{{ package.name }}.jl/branch/master/graph/badge.svg"
                         alt="codecov" /></a></td>
