@@ -19,7 +19,7 @@ There are a bunch of bugfixes as well as some new features in v1.0.0. The main n
 
 ![Plotgallery screenshot](/assets/blog/images/electrondisplay-screenshot-plotgallery.png)
 
-You can have a look at the detailed update [here](https://github.com/queryverse/ElectronDisplay.jl/releases).
+You can have a look at the detailed release notes [here](https://github.com/queryverse/ElectronDisplay.jl/releases).
 
 ## Contributions are welcomed
 
