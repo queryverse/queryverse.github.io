@@ -12,7 +12,7 @@ author: Tony Lian
 There are a bunch of bugfixes as well as some new features in v1.0.0. The main new feature is the [plotgallery](https://github.com/julia-vscode/plotgallery), an interactive plot display UI that is written in TypeScript and based on React. It supports displaying multiple plots in the same window simultaniously, even if those plots are created with different plotting packages. For example, you can display a Gadfly.jl figure and then plot a VegaLite.jl plot, or multiple VegaLite.jl plots, and they would show in a single window instead of opening a new window each time or replacing the old plots.
 
 ### Some functionalities in detail
-* Press CTRL + C on Windows and Linux or Command + C on macOS to copy the current figure
+* Press CTRL + C on Windows and Linux or Command + C on macOS to copy the current figure to the system clipboard
 * Press arrow keys to switch between plots quickly and delete/backspace to remove a graph
 * Supports Vega, VegaLite, and several image formats (such as PNG, JPG, and SVG)
 * Support viewport-sized plots that resize according to the window size
