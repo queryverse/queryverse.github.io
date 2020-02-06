@@ -1,5 +1,5 @@
 ---
-date: 2019-02-13
+date: 2020-02-05
 title: ElectronDisplay.jl v1.0.0 Released
 categories:
   - announcement
