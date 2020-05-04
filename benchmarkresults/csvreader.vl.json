@@ -6,7 +6,7 @@
             },
             "transform": [
                 {
-                    "filter": "datum.attempt == 'first'"
+                    "filter": "datum.attempt == 'first' && datum.platform == 'Windows'"
                 },
                 {
                     "calculate": "datum.withna=='true' ? 'With NA values' : 'Without NA values'",
